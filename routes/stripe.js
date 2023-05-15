@@ -86,8 +86,8 @@ router.post("/create-checkout-session", async (req, res) => {
     customer: customer.id,
     line_items,
     mode: "payment",
-    success_url: `${process.env.CLIENT_URL}/checkout-success`,
-    cancel_url: `${process.env.CLIENT_URL}/cart`,
+    success_url: `https://ecommerce-frontend-eduwork.vercel.app/checkout-success`,
+    cancel_url: `https://ecommerce-frontend-eduwork.vercel.app/cart`,
   });
 
   res.send({ url: session.url });
